@@ -1,0 +1,34 @@
+{% extends "mail/layout.html" %} 
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mail{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'mail/css/styles.css' %}">
+    {% block script %}
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+        <div class="row mt-4">
+            <div class="col-md-6">
+                
+                <div class="containerindex">
+                    <h1 class="display-4">Easy to use email</h1>
+                    <p class="lead">Engage in electronic communication by sending and receiving emails. This involves drafting, formatting, and dispatching messages, as well as organizing and responding to incoming emails. Utilize an email platform to write clear and structured messages, employ text formatting for emphasis, and manage your inbox efficiently.</p>
+                    <a href="{% url 'register' %}" class="btn btn-primary btn-lg mr-3">Create an account</a>
+                    <a href="{% url 'login' %}" class="btn btn-link btn-lg">Log in</a>
+                </div>
+                <img src="" alt="">
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <!-- Placeholder for the right side content -->
+            </div>
+        </div>
+    </div>
+    {% endblock body %}
+</body>
+</html>

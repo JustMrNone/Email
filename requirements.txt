@@ -1,0 +1,29 @@
+# Core Django package
+Django==4.0.4
+
+# For handling JSON responses and requests
+djangorestframework==3.13.1
+
+# For managing user authentication and permissions
+django-allauth==0.44.0
+
+# Optional: If you're using a PostgreSQL database
+psycopg2-binary==2.9.3
+
+# Optional: If you're using MySQL database
+mysqlclient==2.1.0
+
+# Optional: If you're using SQLite (comes with Django by default)
+# No additional package needed for SQLite
+
+# Other dependencies
+requests==2.27.1
+
+# For development and debugging
+django-debug-toolbar==3.2.4
+
+# For security and encryption
+django-environ==0.8.1
+
+# For handling CORS (Cross-Origin Resource Sharing)
+django-cors-headers==3.10.1

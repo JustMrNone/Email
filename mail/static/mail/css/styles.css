@@ -1,0 +1,225 @@
+html{
+  font-size: 16px;
+}
+textarea {
+  min-height: 200px;
+}
+
+.items {
+  cursor: pointer;
+}
+
+.read {
+  background-color: #dfe6e9;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.gmail-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.display-4 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.btn-link{
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: #1a73e8;
+  border-color: #1a73e8;
+}
+
+.btn-primary:hover {
+  background-color: #1669c1;
+  border-color: #1669c1;
+}
+
+.emailicon {
+  position: relative;
+  color: #95a5a6;
+  margin-left: 20px;
+  font-size: 25px;
+  top: 6px;
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.emailicon:hover {
+  color: #7f8c8d;
+  transform: scale(1.2);
+}
+.containerindex{
+  margin-top: 120px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; /* Arrange buttons vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    gap: 10px;
+    
+}
+
+/* Style buttons for larger size */
+.btn-lg {
+    padding: 0.7rem 1.6rem; /* Increase padding */
+    font-size: 1.1rem; /* Increase font size */
+    margin: 0.5rem 0; /* Add space between buttons */
+}
+
+
+.logincontainer {
+  margin-top: 50px; /* Adjusted margin for smaller screens */
+}
+
+.small-input {
+  width: 700px; /* Fixed width of 600px */
+  max-width: 100%; /* Ensure responsiveness */
+}
+
+.btn {
+  padding: 10px 20px; /* Add padding to buttons for better tap targets */
+  font-size: 16px; /* Increase font size for buttons */
+}
+
+.loginconainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack elements vertically on smaller screens */
+}
+
+.loginp {
+  text-align: center;
+}
+.log{
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .small-input {
+    width: 100%; /* Adjusted width for smaller screens */
+    max-width: 100%; /* Ensure responsiveness */
+  }
+}
+.regcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /* Adjusted margin for smaller screens */
+}
+
+.reg {
+  margin-bottom: 20px; /* Space between heading and form */
+}
+
+.registerct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.registerct .form-control {
+  width: 700px; /* Fixed width of 600px */
+  max-width: 100%; /* Ensure responsiveness */
+  padding: 10px; /* Add padding for better spacing */
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+.registerct .btn {
+  padding: 10px 10px; /* Add padding to buttons for better tap targets */
+  font-size: 16px; /* Increase font size for buttons */
+  margin-top: 10px; /* Space above the button */
+}
+
+.loginp {
+  text-align: center;
+  margin-top: 20px; /* Space above the login link */
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .registerct .form-control {
+    width: 80%; /* Adjusted width for smaller screens */
+    max-width: 100%; /* Ensure responsiveness */
+  }
+}
+
+.card-body{
+  padding: 23px;
+}
+.action-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.action-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Add some space between the buttons */
+  margin-top: 10px;
+}
+
+.archive-btn {
+  background-color: lightblue;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.archive-btn:hover {
+  background-color: deepskyblue;
+}
+
+.reply-btn {
+  background-color: lightgreen;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 833px;
+}
+
+.reply-btn:hover {
+  background-color: limegreen;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
