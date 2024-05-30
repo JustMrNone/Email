@@ -1,4 +1,4 @@
-## Django Email Application
+# Django Email Application
 
 This project is a Django-based email application designed for user authentication and email functionalities like sending, receiving, archiving, and deleting emails. Here's a detailed breakdown of each part:
 
@@ -26,7 +26,7 @@ This project is a Django-based email application designed for user authenticatio
 - `django.urls`: For URL routing.
 - `django.views.decorators.csrf`: Handles CSRF tokens.
 
-### Implemented Views:
+### Implemented Views
 
 - `index`: Renders the application homepage (landing page).
 - `inbox`: Renders the inbox view for authenticated users.
