@@ -28,14 +28,15 @@
                     <div class="ml-auto">
 
                         {% block conditional_login_link %}
-                        <a href="{% url 'login' %}" class="btn btn-link login">Login</a>
+                        <a href="{% url 'login' %}" class="btn btn-link login" title="Login">Login</a>
+                        
                         {% endblock conditional_login_link %}
                         {% block conditional_register_link %}
-                        <a href="{% url 'register' %}" class="btn btn-primary">Create an account</a>
+                        <a href="{% url 'register' %}" class="btn btn-primary" title="Register">Create an account</a>
                         {% endblock conditional_register_link %}
                         {% block conditional_inbox_link %}
                         <a href="{% url 'inbox' %}">
-                            <i class="fas fa-envelope emailicon"></i>
+                            <i class="fas fa-envelope emailicon" title="Inbox"></i>
                         </a>
                         {% endblock conditional_inbox_link %}
                     </div>

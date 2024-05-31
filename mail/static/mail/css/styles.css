@@ -241,9 +241,12 @@ body {
   border-color: #ff3f34;
 }
 
-.logout-container {
-  position: absolute;
-  right: 21%;
+
+@media (min-width: 1060px) {
+  .logout-container {
+    position: absolute;
+    right: 20%;
+  }
 }
 
 /* Optional: Adding some margin to the buttons to space them out */
