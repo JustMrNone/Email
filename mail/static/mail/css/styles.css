@@ -1,5 +1,6 @@
 html{
   font-size: 16px;
+  background-color: #f1f2f6 !important;
 }
 textarea {
   min-height: 200px;
@@ -311,7 +312,8 @@ body {
 
 .learn-more:hover {
     background-color: #1a73e8;
-    color: #fff;
+    color: #f7f1e3;
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -352,7 +354,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: #f1f2f6;
   border-top: 1px solid #ccc;
 
 
@@ -389,11 +391,11 @@ body {
 .custom-footer-link {
   margin: 0 10px;
   text-decoration: none;
-  color: #5f6368;
+  color: #808e9b;
 }
 
 .custom-footer-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .custom-footer-right {
@@ -420,4 +422,10 @@ body {
 }
 .divider{
   min-height: 80vh;
+}
+@media (max-width: 768px) {
+  .email{
+    display: none;
+  }
+  
 }

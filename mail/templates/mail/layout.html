@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <title>{% block title %}Mail{% endblock %}</title>
         
-        <link rel="icon" href="{ static 'mail/Img/favicon.ico'}" type="image/x-icon">
+        <link rel="icon" href="{% static 'mail/Img/favicon.ico' %}" type="image/x-icon">
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'mail/css/styles.css' %}">
@@ -22,7 +23,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="{% url 'index' %}">
                         <img src="{% static 'mail/Img/logo.png' %}" alt="Gmail Logo" class="gmail-logo">
-                        Email
+                        <span class="email">Email</span>
                     </a>
                     <div class="ml-auto">
                         <a href="{% url 'login' %}" class="btn btn-link login">Login</a>
@@ -40,7 +41,7 @@
 
     <footer class="custom-footer">
         <div class="custom-footer-left">
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png" alt="Google Logo" class="custom-footer-logo">
+            <!-- <img src="{% static 'mail/Img/Footer.png' %}" alt="Google Logo" class="custom-footer-logo"> -->
         </div>
         <div class="custom-footer-center">
             <a href="#" class="custom-footer-link">Privacy</a>

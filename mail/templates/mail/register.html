@@ -2,12 +2,15 @@
 
 {% block body %}
 
-    {% if message %}
-        <div>{{ message }}</div>
-    {% endif %}
+
     <main>
         <div class="regcontainer">
             <h1 class="reg">Register</h1>
+            {% if message %}
+            <div class="alert alert-warning" role="alert">
+                {{ message }}
+            </div>
+            {% endif %}
             <div class="registerct">
                 <form action="{% url 'register' %}" method="post">
                     {% csrf_token %}
@@ -23,13 +26,14 @@
                     <input class="btn btn-primary" type="submit" value="Register">
                 </form>
             </div>
+            <div class="loginp">
+                <p>Already have an account? <a href="{% url 'login' %}">Log In here.</a></p>
+            </div>
         </div>
     </main>
 
     
-    <div class="loginp">
-        <p>Already have an account? <a href="{% url 'login' %}">Log In here.</a></p>
-    </div>
+
 {% endblock body %}
 
 {% block footer%}

@@ -6,12 +6,14 @@ from django.db import IntegrityError
 from django.http import JsonResponse
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-
 from .models import User, Email
+
 
 # View to render the main index page
 def index(request):
     return render(request, "mail/index.html")
+
+
 
 # View to render the inbox page, ensuring the user is logged in
 @login_required
@@ -20,6 +22,8 @@ def inbox(request):
         return render(request, "mail/inbox.html")
     else:
         return HttpResponseRedirect(reverse("login"))
+
+
 
 # View to handle composing and sending emails, allowing only POST requests
 @csrf_exempt
@@ -67,6 +71,8 @@ def compose(request):
 
     return JsonResponse({"message": "Email sent successfully.", "status": 201}, status=201)
 
+
+
 # View to load emails from the specified mailbox
 @login_required
 def mailbox(request, mailbox):
@@ -87,6 +93,8 @@ def mailbox(request, mailbox):
 
     emails = emails.order_by("-timestamp").all()
     return JsonResponse([email.serialize() for email in emails], safe=False)
+
+
 
 # View to handle fetching, updating, and deleting a specific email
 @csrf_exempt
@@ -116,19 +124,35 @@ def email(request, email_id):
     else:
         return JsonResponse({"error": "GET, PUT, or DELETE request required."}, status=400)
 
+
+
 # View to handle user registration
 def register(request):
     if request.method == "POST":
-        email = request.POST["email"]
-        password = request.POST["password"]
-        confirmation = request.POST["confirmation"]
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        confirmation = request.POST.get("confirmation")
 
+        # Check if any field is empty
+        if not (email and password and confirmation):
+            return render(request, "mail/register.html", {
+                "message": "Please fill in all fields."
+            })
+
+        # Password strength check (example: at least 8 characters)
+        if len(password) < 8:
+            return render(request, "mail/register.html", {
+                "message": "Password must be at least 8 characters long."
+            })
+
+        # Check if passwords match
         if password != confirmation:
             return render(request, "mail/register.html", {
                 "message": "Passwords must match."
             })
 
         try:
+            # Create user
             user = User.objects.create_user(email, email, password)
             user.save()
         except IntegrityError:
@@ -136,27 +160,42 @@ def register(request):
                 "message": "Email address already taken."
             })
         
+        # Automatically log in user after registration
         login(request, user)
         return HttpResponseRedirect(reverse("inbox"))
     else:
         return render(request, "mail/register.html")
-
+    
+    
+    
 # View to handle user login
 def login_view(request):
     if request.method == "POST":
-        email = request.POST["email"]
-        password = request.POST["password"]
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+
+        # Check if email and password are provided
+        if not (email and password):
+            return render(request, "mail/login.html", {
+                "message": "Please provide both email and password."
+            })
+
+        # Authenticate user
         user = authenticate(request, username=email, password=password)
 
         if user is not None:
+            # If user is authenticated, log them in and redirect to inbox
             login(request, user)
             return HttpResponseRedirect(reverse("inbox"))
         else:
+            # If authentication fails, render login page with error message
             return render(request, "mail/login.html", {
                 "message": "Invalid email and/or password."
             })
     else:
+        # If request method is not POST, render login page
         return render(request, "mail/login.html")
+
 
 # View to handle user logout
 def logout_view(request):
