@@ -17,28 +17,46 @@
         {% endblock script %}
     </head>
     <body>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="{% url 'index' %}">
-                    <img src="{% static 'mail/Img/logo.png' %}" alt="Gmail Logo" class="gmail-logo">
-
-                    Email
-                </a>
-                <div class="ml-auto">
-                    <a href="{% url 'login' %}" class="btn btn-link">Login</a>
-
-                    
-                    <a href="{% url 'register' %}" class="btn btn-primary">Create an account</a>
-                    <a href="{% url 'inbox' %}">
-                        
-                        <i class="fas fa-envelope emailicon"></i>
+        <div class="wrapper">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <img src="{% static 'mail/Img/logo.png' %}" alt="Gmail Logo" class="gmail-logo">
+                        Email
                     </a>
+                    <div class="ml-auto">
+                        <a href="{% url 'login' %}" class="btn btn-link login">Login</a>
+                        <a href="{% url 'register' %}" class="btn btn-primary">Create an account</a>
+                        <a href="{% url 'inbox' %}">
+                            <i class="fas fa-envelope emailicon"></i>
+                        </a>
+                    </div>
+                </nav>
+                <div class="content">
+                    {% block body %}
+                    {% endblock body %}
                 </div>
-            </nav>
-            <div class="content">
-                {% block body %}
-                {% endblock body %}
             </div>
+
+    <footer class="custom-footer">
+        <div class="custom-footer-left">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png" alt="Google Logo" class="custom-footer-logo">
         </div>
+        <div class="custom-footer-center">
+            <a href="#" class="custom-footer-link">Privacy</a>
+            <a href="#" class="custom-footer-link">Terms</a>
+            <a href="#" class="custom-footer-link">About Google</a>
+            <a href="#" class="custom-footer-link">Products</a>
+            <a href="#" class="custom-footer-link">Policy</a>
+            <a href="#" class="custom-footer-link">Privacy & Security</a>
+        </div>
+        <div class="custom-footer-right">
+            <a href="#" class="custom-footer-link">Help</a>
+            <a href="#" class="custom-footer-link">English</a>
+            <span class="custom-dropdown">&#9660;</span>
+        </div>
+    </footer>
+        </div>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </body>
 </html>

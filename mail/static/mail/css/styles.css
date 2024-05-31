@@ -10,10 +10,11 @@ textarea {
 }
 
 .read {
-  background-color: #dfe6e9;
+  background-color: #f7f1e3;
 }
 body {
   font-family: "Roboto", sans-serif;
+
 }
 
 .navbar {
@@ -36,7 +37,7 @@ body {
 }
 
 .btn-link{
-  color: #1a73e8;
+  color: #54a0ff;
   text-decoration: none;
 }
 
@@ -45,18 +46,18 @@ body {
 }
 
 .btn-primary {
-  background-color: #1a73e8;
-  border-color: #1a73e8;
+  background-color: #54a0ff;
+  border-color: #54a0ff;
 }
 
 .btn-primary:hover {
-  background-color: #1669c1;
-  border-color: #1669c1;
+  background-color: #2e86de;
+  border-color: #2e86de;
 }
 
 .emailicon {
   position: relative;
-  color: #95a5a6;
+  color: #ee5253;
   margin-left: 20px;
   font-size: 25px;
   top: 6px;
@@ -64,7 +65,7 @@ body {
 }
 
 .emailicon:hover {
-  color: #7f8c8d;
+  color: #ff6b6b;
   transform: scale(1.2);
 }
 .containerindex{
@@ -185,8 +186,8 @@ body {
 }
 
 .archive-btn {
-  background-color: lightblue;
-  color: black;
+  background-color: #60a3bc;
+  color: #1e272e;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -194,12 +195,12 @@ body {
 }
 
 .archive-btn:hover {
-  background-color: deepskyblue;
+  background-color: #82ccdd;
 }
 
 .reply-btn {
-  background-color: lightgreen;
-  color: black;
+  background-color: #1dd1a1;
+  color: #1e272e;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -208,12 +209,12 @@ body {
 }
 
 .reply-btn:hover {
-  background-color: limegreen;
+  background-color: #10ac84;
 }
 
 .delete-btn {
-  background-color: red;
-  color: white;
+  background-color: #ff5e57;
+  color: #f7f1e3;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -221,5 +222,202 @@ body {
 }
 
 .delete-btn:hover {
-  background-color: darkred;
+  background-color: #ff3f34;
+}
+.login:hover{
+  text-decoration: none;
+}
+
+.logout{
+  border-color: #ff3f34;
+  color: #ff3f34;
+
+}
+.logout:hover{
+  background-color: #ff3f34;
+  border-color: #ff3f34;
+}
+
+.logout-container {
+  position: absolute;
+  right: 21%;
+}
+
+/* Optional: Adding some margin to the buttons to space them out */
+.button-container button {
+  margin: 0 5px;
+}
+
+.logout-container .logout {
+  margin-right: 5px; /* Adjust this value as needed */
+}
+
+.features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.feature {
+    margin: 20px;
+    max-width: 300px;
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #1a73e8;
+}
+
+.workspace-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.workspace-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.workspace-section h2 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.workspace-section p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #1a73e8;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #1a73e8;
+    color: #1a73e8;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #1a73e8;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .features-section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .workspace-icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .workspace-section h2 {
+        font-size: 32px;
+    }
+
+    .workspace-section p {
+        font-size: 18px;
+    }
+}
+
+.custom-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.custom-footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ccc;
+
+
+}
+.regcontainer{
+  min-height: 80vh;
+}
+.loginconainer{
+  min-height: 80vh;
+}
+.custom-footer-left,
+.custom-footer-center,
+.custom-footer-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.custom-footer-left {
+  flex: 1;
+}
+
+.custom-footer-logo {
+  height: 30px;
+}
+
+.custom-footer-center {
+  flex: 2;
+  justify-content: center;
+  text-align: center;
+}
+
+.custom-footer-link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #5f6368;
+}
+
+.custom-footer-link:hover {
+  text-decoration: underline;
+}
+
+.custom-footer-right {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.custom-dropdown {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .custom-footer-center {
+      flex: 100%;
+      justify-content: center;
+  }
+
+  .custom-footer-right {
+      justify-content: center;
+      flex: 100%;
+      margin-top: 10px;
+  }
+}
+.divider{
+  min-height: 80vh;
 }

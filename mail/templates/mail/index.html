@@ -1,18 +1,17 @@
 {% extends "mail/layout.html" %} 
 {% load static %} 
-<!DOCTYPE html>
-<html lang="en">
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Mail{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'mail/css/styles.css' %}">
     {% block script %}
     {% endblock %}
 </head>
-<body>
+
     {% block body %}
+    <main>
         <div class="row mt-4">
             <div class="col-md-6">
                 
@@ -20,7 +19,7 @@
                     <h1 class="display-4">Easy to use email</h1>
                     <p class="lead">Engage in electronic communication by sending and receiving emails. This involves drafting, formatting, and dispatching messages, as well as organizing and responding to incoming emails. Utilize an email platform to write clear and structured messages, employ text formatting for emphasis, and manage your inbox efficiently.</p>
                     <a href="{% url 'register' %}" class="btn btn-primary btn-lg mr-3">Create an account</a>
-                    <a href="{% url 'login' %}" class="btn btn-link btn-lg">Log in</a>
+                    <a href="{% url 'login' %}" class="btn btn-link btn-lg login">Log in</a>
                 </div>
                 <img src="" alt="">
             </div>
@@ -28,7 +27,43 @@
                 <!-- Placeholder for the right side content -->
             </div>
         </div>
-    </div>
+        <div>
+            <section class="features-section">
+                <div class="feature">
+                    <div class="feature-icon">&#10004;</div>
+                    <h3>Works with other tools</h3>
+                    <p>Gmail works great with desktop clients like Microsoft Outlook, Apple Mail and Mozilla Thunderbird, including contact and event sync.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128276;</div>
+                    <h3>Stay productive, even offline</h3>
+                    <p>Gmail offline lets you read, reply, delete, and search your Gmail messages when you’re not connected to the internet.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&#128241;</div>
+                    <h3>Experience Gmail on any device</h3>
+                    <p>Enjoy the ease and simplicity of Gmail, wherever you are.</p>
+                </div>
+            </section>
+        
+            <section class="workspace-section">
+                <div class="workspace-icons">
+                    <img src="{% static 'mail/Img/mail-icon.png' %}" alt="Gmail">
+                    <img src="{% static 'mail/Img/calendar-icon.png' %}" alt="Calendar">
+                    <img src="{% static 'mail/Img/drive-icon.png' %}" alt="Drive">
+                    <img src="{% static 'mail/Img/docs-icon.png' %}" alt="Docs">
+                    <img src="{% static 'mail/Img/meet-icon.png' %}" alt="Meet">
+                </div>
+                <h2>Gmail is now part of Google Workspace</h2>
+                <p>Collaborate faster, from any device, anytime, all in one place.</p>
+                <p>Google Workspace is a set of productivity and collaboration tools that helps individuals, teams, and businesses stay on top of everything. It is a flexible, innovative solution for <span class="highlight">business</span> or personal use that includes all of your favorite apps like Gmail, Calendar, Drive, Docs, Meet, and more.</p>
+                <a href="#" class="learn-more">Learn more</a>
+            </section>
+        </div>
+    </main>
+
     {% endblock body %}
-</body>
-</html>
+
+    {% block footer%}
+    {% endblock footer %}
+
