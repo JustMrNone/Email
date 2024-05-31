@@ -108,6 +108,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -8px;
   flex-direction: column; /* Stack elements vertically on smaller screens */
 }
 
@@ -131,6 +132,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 50px; /* Adjusted margin for smaller screens */
+  margin-top: -8px;
 }
 
 .reg {
@@ -387,15 +389,17 @@ body {
   justify-content: center;
   text-align: center;
 }
-
 .custom-footer-link {
   margin: 0 10px;
   text-decoration: none;
   color: #808e9b;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .custom-footer-link:hover {
   text-decoration: none;
+  transform: scale(1.4);
+  color: #ff4757;
 }
 
 .custom-footer-right {
