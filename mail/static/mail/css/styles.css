@@ -11,7 +11,7 @@ textarea {
 }
 
 .read {
-  background-color: #f7f1e3;
+  background-color: #dfe4ea;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -208,7 +208,7 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-  margin-right: 833px;
+  margin-right: 792px;
 }
 
 .reply-btn:hover {
@@ -393,10 +393,17 @@ body {
   margin: 0 10px;
   text-decoration: none;
   color: #808e9b;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
-
-.custom-footer-link:hover {
+.custom-footer-link:hover{
+  text-decoration: none;
+  color: #ff6b81;
+}
+.custom-footer-link-up{
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.custom-footer-link-up:hover {
   text-decoration: none;
   transform: scale(1.4);
   color: #ff4757;
@@ -432,4 +439,8 @@ body {
     display: none;
   }
   
+}
+
+#emails-view, #compose-view {
+  display: none;
 }

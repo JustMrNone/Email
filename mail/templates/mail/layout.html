@@ -33,9 +33,11 @@
                         {% block conditional_register_link %}
                         <a href="{% url 'register' %}" class="btn btn-primary">Create an account</a>
                         {% endblock conditional_register_link %}
+                        {% block conditional_inbox_link %}
                         <a href="{% url 'inbox' %}">
                             <i class="fas fa-envelope emailicon"></i>
                         </a>
+                        {% endblock conditional_inbox_link %}
                     </div>
                 </nav>
                 <div class="content">
@@ -57,7 +59,7 @@
             <a href="#" class="custom-footer-link">Privacy & Security</a>
         </div>
         <div class="custom-footer-right">
-            <a href="#top" class="custom-footer-link"><i class="fas fa-arrow-up arrowup"></i></a>
+            <a href="#top" class="custom-footer-link-up"><i class="fas fa-arrow-up arrowup"></i></a>
             <a href="#" class="custom-footer-link"></a>
             <span class="custom-dropdown"></span>
         </div>
