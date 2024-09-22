@@ -1,5 +1,5 @@
 # Django Email Application
-
+![Email](https://justmrnone.github.io/NeverEndingPong/repersentation/mail.png)
 This project is a Django-based email application designed for user authentication and email functionalities like sending, receiving, archiving, and deleting emails. Here's a detailed breakdown of each part:
 
 ## Features
