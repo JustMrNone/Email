@@ -1,6 +1,6 @@
 # Django Email Application
-<div>
-  <a><img src="https://justmrnone.github.io/NeverEndingPong/repersentation/mail.png" width=100%></a>
+<div align="center">
+  <a><img src="https://justmrnone.github.io/NeverEndingPong/repersentation/mail.png" width=90%></a>
 </div>
 <br>
 This project is a Django-based email application designed for user authentication and email functionalities like sending, receiving, archiving, and deleting emails. Here's a detailed breakdown of each part:
